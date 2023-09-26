@@ -1,0 +1,10 @@
+{
+	"snippets.ultisnips.pythonPrompt": false,
+	"suggest.noselect": true,
+	"diagnostic.hintSign": "",
+	"diagnostic.warningSign": "",
+	"diagnostic.errorSign": "",
+	"coc.preferences.formatOnType": true,
+	"typescript.format.enable": true,
+	"coc.preferences.formatOnSave": true
+}
