@@ -112,7 +112,11 @@ require("lazy").setup({
 			require('telescope').setup({
 				pickers = {
 					find_files = {
+						theme = 'dropdown',
 						hidden = true
+					},
+					live_grep = {
+						theme = 'dropdown',
 					}
 				}
 			})
