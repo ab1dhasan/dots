@@ -1,0 +1,6 @@
+[user]
+	email = abid@devsnest.net
+	name = Abid Hasan
+	signingkey = 299AA76B73C1D061DA2BE8D4C719D0934C1E8984
+[commit]
+	gpgsign = true
