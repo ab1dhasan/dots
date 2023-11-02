@@ -67,8 +67,10 @@ lsp.format_on_save({
 	servers = {
 		['lua_ls'] = { 'lua' },
 		['rust_analyzer'] = { 'rust' },
-		['tsserver'] = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' },
-		['gopls'] = { 'go' }
+		-- ['tsserver'] = { 'typescript', 'typescriptreact', 'javascript', 'javascriptreact' },
+		['gopls'] = { 'go' },
+		['json-lsp'] = { 'json' },
+		['yaml'] = { 'yaml' }
 		-- if you have a working setup with null-ls
 		-- you can specify filetypes it can format.
 		-- ['null-ls'] = {'javascript', 'typescript'},
