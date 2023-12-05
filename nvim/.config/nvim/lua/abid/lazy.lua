@@ -16,11 +16,19 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+		"ellisonleao/gruvbox.nvim",
+		name = "gruvbox",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme 'gruvbox'
+		end
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme 'catppuccin-mocha'
+			-- vim.cmd.colorscheme 'catppuccin-mocha'
 		end
 	},
 	{
