@@ -16,19 +16,29 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
+		'sainnhe/everforest',
+		name = "everforest",
+		priority = 1000,
+		config = function()
+			-- vim.g.everforest_background = 'soft'
+			-- vim.g.everforest_better_performance = 1
+			-- vim.cmd.colorscheme 'everforest'
+		end
+	},
+	{
 		"ellisonleao/gruvbox.nvim",
 		name = "gruvbox",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'gruvbox'
-		end
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'gruvbox'
+		-- end
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			-- vim.cmd.colorscheme 'catppuccin-mocha'
+			vim.cmd.colorscheme 'catppuccin-mocha'
 		end
 	},
 	{
@@ -142,7 +152,23 @@ require("lazy").setup({
 		},
 		lazy = false,
 	},
-	{ "lukas-reineke/indent-blankline.nvim" },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		-- main = 'ibl',
+		config = function()
+			require("ibl").setup()
+			-- require("ibl").setup {
+			-- 	char = "│",
+			-- 	-- context_char = "│",
+			-- 	show_current_context = true,
+			-- 	show_current_context_start = true,
+			-- 	-- whitespace = {
+			-- 	-- 	remove_blankline_trail = false
+			-- 	-- }
+			-- }
+		end
+	},
+
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
@@ -156,6 +182,8 @@ require("lazy").setup({
 			{ 'hrsh7th/nvim-cmp' },  -- Required
 			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
 			{ 'L3MON4D3/LuaSnip' },  -- Required
+			{ 'hrsh7th/cmp-emoji' },
+			{ 'hrsh7th/cmp-buffer' }
 		}
 	},
 	{
@@ -163,5 +191,6 @@ require("lazy").setup({
 	},
 	{
 		"mattn/emmet-vim"
-	}
+	},
+	{ 'folke/trouble.nvim' }
 })

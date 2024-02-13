@@ -1,0 +1,21 @@
+import = ["/home/abid/.config/alacritty/themes/themes/catppuccin.toml"]
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "#000000"
+
+[font]
+size = 14
+
+[font.normal]
+family = "monospace"
+style = "Medium"
+
+[[keyboard.bindings]]
+action = "ToggleFullScreen"
+key = "F11"
+
+[window]
+blur = true
+decorations = "none"
+opacity = 0.85
