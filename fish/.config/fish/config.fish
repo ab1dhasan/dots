@@ -1,8 +1,5 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-		set -g PATH $PATH $HOME/.nix-profile/bin $HOME/Applications/bin
-		set -g EDITOR "nvim"
-		set -g SUDO_EDITOR "nvim"
 end
 
 # bun

@@ -9,7 +9,7 @@ size = 14
 
 [font.normal]
 family = "monospace"
-style = "Medium"
+style = "Bold"
 
 [[keyboard.bindings]]
 action = "ToggleFullScreen"
