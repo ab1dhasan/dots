@@ -1,11 +1,13 @@
-import = ["/home/abid/.config/alacritty/themes/themes/catppuccin.toml"]
+import = ["/home/abid/.config/alacritty/themes/themes/monokai_pro.toml"]
 
 [colors.cursor]
 cursor = "#ffffff"
 text = "#000000"
 
 [font]
-size = 14
+size = 15
+# offset.x = 0
+# offset.y = 5
 
 [font.normal]
 family = "monospace"
@@ -18,4 +20,4 @@ key = "F11"
 [window]
 blur = true
 decorations = "none"
-opacity = 0.85
+opacity = 0.95

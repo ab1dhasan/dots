@@ -29,8 +29,16 @@ require("lazy").setup({
 		"ellisonleao/gruvbox.nvim",
 		name = "gruvbox",
 		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme 'gruvbox'
+		end
+	},
+	{
+		"Shatur/neovim-ayu",
+		name = "ayu",
+		priority = 1000,
 		-- config = function()
-		-- 	vim.cmd.colorscheme 'gruvbox'
+		-- 	vim.cmd.colorscheme 'ayu-mirage'
 		-- end
 	},
 	{
@@ -38,7 +46,7 @@ require("lazy").setup({
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme 'catppuccin-mocha'
+			-- vim.cmd.colorscheme 'catppuccin-macchiato'
 		end
 	},
 	{
@@ -106,7 +114,7 @@ require("lazy").setup({
 		config = function()
 			require('lualine').setup({
 				options = {
-					theme = 'catppuccin',
+					theme = 'gruvbox',
 					section_separators = '',
 					component_separators = ''
 				}
