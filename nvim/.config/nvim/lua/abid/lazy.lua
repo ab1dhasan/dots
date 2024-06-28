@@ -26,11 +26,19 @@ require("lazy").setup({
 		end
 	},
 	{
+		"tanvirtin/monokai.nvim",
+		name = "monokai",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme 'monokai_pro'
+		end
+	},
+	{
 		"ellisonleao/gruvbox.nvim",
 		name = "gruvbox",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme 'gruvbox'
+			-- vim.cmd.colorscheme 'gruvbox'
 		end
 	},
 	{
