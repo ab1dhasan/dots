@@ -29,9 +29,9 @@ require("lazy").setup({
 		"tanvirtin/monokai.nvim",
 		name = "monokai",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'monokai_pro'
-		end
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'monokai_pro'
+		-- end
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
@@ -45,9 +45,9 @@ require("lazy").setup({
 		"Shatur/neovim-ayu",
 		name = "ayu",
 		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'ayu-mirage'
-		-- end
+		config = function()
+			vim.cmd.colorscheme 'ayu-mirage'
+		end
 	},
 	{
 		"catppuccin/nvim",
@@ -122,7 +122,7 @@ require("lazy").setup({
 		config = function()
 			require('lualine').setup({
 				options = {
-					theme = 'gruvbox',
+					theme = 'ayu_mirage',
 					section_separators = '',
 					component_separators = ''
 				}

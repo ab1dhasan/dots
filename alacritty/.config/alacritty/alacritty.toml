@@ -1,7 +1,7 @@
-import = ["/home/abid/.config/alacritty/themes/themes/monokai_pro.toml"]
+import = ["/home/abid/.config/alacritty/themes/themes/ayu_dark.toml"]
 
 [colors.cursor]
-cursor = "#ffffff"
+cursor = "#FF4057"
 text = "#000000"
 
 [font]

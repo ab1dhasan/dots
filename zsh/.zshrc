@@ -5,6 +5,7 @@ zstyle :compinstall filename '/home/abid/.zshrc'
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -128,12 +129,20 @@ forward-word-dir () {
 zle -N forward-word-dir
 bindkey "^[[1;3C" forward-word-dir
 
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # git branch
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 setopt PROMPT_SUBST
+
+export GPG_TTY=$(tty)
+export PATH="$PATH:$HOME/.bun/bin:$HOME/Applications/bin"
 
 PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f%F{red}$(parse_git_branch)%f %# '
 RPROMPT='[%F{yellow}%?%f]'
