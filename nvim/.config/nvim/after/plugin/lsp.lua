@@ -20,6 +20,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<C-Space>"] = cmp.mapping.complete(),
 })
 
+cmp.setup({
+	mapping = {
+		['<C-k>'] = cmp.mapping.scroll_docs(-4),
+		['<C-j>'] = cmp.mapping.scroll_docs(4),
+	},
+})
+
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
