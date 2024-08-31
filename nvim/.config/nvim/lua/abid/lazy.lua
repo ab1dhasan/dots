@@ -26,6 +26,14 @@ require("lazy").setup({
 		end
 	},
 	{
+		"Mofiqul/dracula.nvim",
+		name = "dracula",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme 'dracula'
+		end
+	},
+	{
 		"tanvirtin/monokai.nvim",
 		name = "monokai",
 		priority = 1000,
@@ -45,17 +53,49 @@ require("lazy").setup({
 		"Shatur/neovim-ayu",
 		name = "ayu",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'ayu-mirage'
-		end
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'ayu-mirage'
+		-- end
+	},
+	{
+		"wilmanbarrios/palenight.nvim",
+		name = "palenight",
+		priority = 1000,
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'palenight'
+		-- end
+	},
+	{
+		"metalelf0/jellybeans-nvim",
+		name = "jellybeans",
+		priority = 1000,
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'rose-pine-main'
+		-- end
+	},
+	{
+		"bluz71/vim-nightfly-colors",
+		name = "nightfly",
+		priority = 1000,
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'rose-pine-main'
+		-- end
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		priority = 1000,
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'rose-pine-main'
+		-- end
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		config = function()
-			-- vim.cmd.colorscheme 'catppuccin-macchiato'
-		end
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'catppuccin-macchiato'
+		-- end
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -122,7 +162,7 @@ require("lazy").setup({
 		config = function()
 			require('lualine').setup({
 				options = {
-					theme = 'ayu_mirage',
+					-- theme = 'ayu_mirage',
 					section_separators = '',
 					component_separators = ''
 				}
