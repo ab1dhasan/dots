@@ -29,9 +29,9 @@ require("lazy").setup({
 		"Mofiqul/dracula.nvim",
 		name = "dracula",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'dracula'
-		end
+		-- config = function()
+		-- 	vim.cmd.colorscheme 'dracula'
+		-- end
 	},
 	{
 		"tanvirtin/monokai.nvim",
@@ -93,9 +93,9 @@ require("lazy").setup({
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'catppuccin-macchiato'
-		-- end
+		config = function()
+			vim.cmd.colorscheme 'catppuccin-macchiato'
+		end
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",
