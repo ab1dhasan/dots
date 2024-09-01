@@ -142,7 +142,7 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 
 export GPG_TTY=$(tty)
-export PATH="$PATH:$HOME/.bun/bin:$HOME/Applications/bin"
+export PATH="$PATH:$HOME/.local/share/bin:$HOME/.bun/bin:$HOME/Applications/bin:$HOME/.cargo/bin:$HOME/go/bin"
 
 PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{blue}%B%~%b%f%F{red}$(parse_git_branch)%f %# '
 RPROMPT='[%F{yellow}%?%f]'
