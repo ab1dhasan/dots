@@ -208,23 +208,29 @@ require("lazy").setup({
 		},
 		lazy = false,
 	},
+	-- {
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	-- main = 'ibl',
+	-- 	config = function()
+	-- 		require("ibl").setup()
+	-- 		-- require("ibl").setup {
+	-- 		-- 	char = "│",
+	-- 		-- 	-- context_char = "│",
+	-- 		-- 	show_current_context = true,
+	-- 		-- 	show_current_context_start = true,
+	-- 		-- 	-- whitespace = {
+	-- 		-- 	-- 	remove_blankline_trail = false
+	-- 		-- 	-- }
+	-- 		-- }
+	-- 	end
+	-- },
 	{
-		"lukas-reineke/indent-blankline.nvim",
-		-- main = 'ibl',
+		'echasnovski/mini.nvim',
+		version = false,
 		config = function()
-			require("ibl").setup()
-			-- require("ibl").setup {
-			-- 	char = "│",
-			-- 	-- context_char = "│",
-			-- 	show_current_context = true,
-			-- 	show_current_context_start = true,
-			-- 	-- whitespace = {
-			-- 	-- 	remove_blankline_trail = false
-			-- 	-- }
-			-- }
+			require('mini.indentscope').setup()
 		end
 	},
-
 	{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
