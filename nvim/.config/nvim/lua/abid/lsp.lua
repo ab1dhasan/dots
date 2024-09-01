@@ -44,6 +44,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 	end
 })
+
+local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 -- Set up nvim-cmp.
 local cmp = require'cmp'
 local cmp_kinds = {
@@ -99,6 +106,10 @@ cmp.setup({
 			return vim_item
 		end,
 	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
 })
 
 -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
@@ -129,4 +140,9 @@ cmp.setup.cmdline(':', {
 			{ name = 'cmdline' }
 		}),
 	matching = { disallow_symbol_nonprefix_matching = false }
+})
+
+vim.diagnostic.config({
+	virtual_text = false,
+	float = { border = "rounded" },
 })
