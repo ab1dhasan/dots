@@ -231,26 +231,26 @@ require("lazy").setup({
 			require('mini.indentscope').setup()
 		end
 	},
-	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		dependencies = {
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },          -- Required
-			{ 'williamboman/mason.nvim' },        -- Optional
-			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' },  -- Required
-			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'L3MON4D3/LuaSnip' },  -- Required
-			{ 'hrsh7th/cmp-emoji' },
-			{ 'hrsh7th/cmp-buffer' },
-			{ 'hrsh7th/cmp-path' },
-			{ 'hrsh7th/cmp-cmdline' },
-			{ 'saadparwaiz1/cmp_luasnip' }
-		}
-	},
+	-- {
+	-- 	'VonHeikemen/lsp-zero.nvim',
+	-- 	branch = 'v2.x',
+	-- 	dependencies = {
+	-- 		-- LSP Support
+	-- 		{ 'neovim/nvim-lspconfig' },          -- Required
+	-- 		{ 'williamboman/mason.nvim' },        -- Optional
+	-- 		{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+	--
+	-- 		-- Autocompletion
+	-- 		{ 'hrsh7th/nvim-cmp' },  -- Required
+	-- 		{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
+	-- 		{ 'L3MON4D3/LuaSnip' },  -- Required
+	-- 		{ 'hrsh7th/cmp-emoji' },
+	-- 		{ 'hrsh7th/cmp-buffer' },
+	-- 		{ 'hrsh7th/cmp-path' },
+	-- 		{ 'hrsh7th/cmp-cmdline' },
+	-- 		{ 'saadparwaiz1/cmp_luasnip' }
+	-- 	}
+	-- },
 	{
 		"airblade/vim-gitgutter"
 	},
@@ -282,4 +282,17 @@ require("lazy").setup({
 		end
 	},
 	{ 'mg979/vim-visual-multi' },
+	{
+		'neovim/nvim-lspconfig',
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
+		'neovim/nvim-lspconfig',
+		'hrsh7th/cmp-nvim-lsp',
+		'hrsh7th/cmp-buffer',
+		'hrsh7th/cmp-path',
+		'hrsh7th/cmp-cmdline',
+		'hrsh7th/nvim-cmp',
+		'L3MON4D3/LuaSnip',
+		'saadparwaiz1/cmp_luasnip'
+	}
 })
