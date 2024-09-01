@@ -1,4 +1,7 @@
-import = ["/home/abid/.config/alacritty/themes/themes/ayu_dark.toml"]
+import = ["/home/abid/.config/alacritty/themes/themes/dracula.toml"]
+
+[env]
+TERM = "xterm-256color"
 
 [colors.cursor]
 cursor = "#FF4057"
@@ -7,7 +10,7 @@ text = "#000000"
 [font]
 size = 15
 # offset.x = 0
-# offset.y = 5
+offset.y = 5
 
 [font.normal]
 family = "monospace"
@@ -20,4 +23,4 @@ key = "F11"
 [window]
 blur = true
 decorations = "none"
-opacity = 0.95
+opacity = 0.85
