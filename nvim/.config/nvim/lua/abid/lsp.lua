@@ -25,7 +25,14 @@ lspconfig.lua_ls.setup({
 		}
 	}
 })
-lspconfig.rust_analyzer.setup({})
+lspconfig.rust_analyzer.setup({
+	diagnostics = {
+		enable = true,
+		experimental = {
+			enable = true
+		}
+	},
+})
 lspconfig.tsserver.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
