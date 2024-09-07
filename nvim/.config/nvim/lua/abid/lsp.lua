@@ -13,9 +13,16 @@ require('mason-lspconfig').setup({
 		"rust_analyzer",
 		"tsserver"
 	},
+	handlers = {
+    function(server_name)
+      require('lspconfig')[server_name].setup({})
+    end,
+  }
 })
 
 local lspconfig = require('lspconfig')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 lspconfig.lua_ls.setup({
 	settings = {
 		Lua = {
@@ -34,6 +41,9 @@ lspconfig.rust_analyzer.setup({
 	},
 })
 lspconfig.tsserver.setup({})
+lspconfig.cssls.setup({
+	capabilities = capabilities,
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	callback = function(ev)
