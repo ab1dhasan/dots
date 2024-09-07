@@ -134,9 +134,9 @@ require("lazy").setup({
 	{
 		"jiangmiao/auto-pairs"
 	},
-	{
-		"xiyaowong/transparent.nvim"
-	},
+	-- {
+	-- 	"xiyaowong/transparent.nvim"
+	-- },
 	{
 		"nvim-tree/nvim-tree.lua",
 		dependencies = {
