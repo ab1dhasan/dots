@@ -10,7 +10,8 @@ text = "#000000"
 [font]
 size = 15
 # offset.x = 0
-offset.y = 5
+offset.y = 6
+glyph_offset.y = 3
 
 [font.normal]
 family = "monospace"
