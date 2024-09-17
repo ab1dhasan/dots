@@ -90,16 +90,28 @@ require("lazy").setup({
 		-- end
 	},
 	{
+		"folke/tokyonight.nvim",
+		name = "tokyonight",
+		priority = 1000,
+		opts = {
+			transparent = true,
+		},
+		config = function(_, opts)
+			require("tokyonight").setup(opts)
+			vim.cmd.colorscheme("tokyonight-storm")
+		end
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		opts = {
-			transparent_background = true,
-		},
-		config = function(_, opts)
-			require("catppuccin").setup(opts)
-			vim.cmd.colorscheme("catppuccin-macchiato")
-		end
+		-- opts = {
+		-- 	transparent_background = true,
+		-- },
+		-- config = function(_, opts)
+		-- 	require("catppuccin").setup(opts)
+		-- 	vim.cmd.colorscheme("catppuccin-macchiato")
+		-- end
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",

@@ -1,4 +1,4 @@
-import = ["/home/abid/.config/alacritty/themes/themes/rose-pine-moon.toml"]
+import = ["/home/abid/.config/alacritty/themes/themes/tokyo-night-storm.toml"]
 
 [env]
 TERM = "xterm-256color"
