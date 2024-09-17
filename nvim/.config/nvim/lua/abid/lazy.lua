@@ -369,5 +369,6 @@ require("lazy").setup({
 				},
 			}
 		end
-	}
+	},
+	{'akinsho/git-conflict.nvim', version = "*", config = true}
 })
