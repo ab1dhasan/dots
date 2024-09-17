@@ -109,6 +109,13 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
 		vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.rename() end, opts)
 		vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+		require("lsp_signature").on_attach({
+      bind = true,
+      handler_opts = {
+        border = "rounded"
+      }
+    }, ev.buffer)
 	end
 })
 
