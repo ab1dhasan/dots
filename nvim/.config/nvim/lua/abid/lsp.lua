@@ -113,7 +113,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		require("lsp_signature").on_attach({
       bind = true,
       handler_opts = {
-        border = "rounded"
+        -- border = "rounded"
       }
     }, ev.buffer)
 	end
@@ -182,10 +182,10 @@ cmp.setup({
 			return vim_item
 		end,
 	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
+	-- window = {
+	-- 	completion = cmp.config.window.bordered(),
+	-- 	documentation = cmp.config.window.bordered(),
+	-- },
 })
 
 -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
@@ -221,5 +221,5 @@ cmp.setup.cmdline(':', {
 vim.diagnostic.config({
 	virtual_text = true,
 	signs = false,
-	float = { border = "rounded" },
+	-- float = { border = "rounded" },
 })

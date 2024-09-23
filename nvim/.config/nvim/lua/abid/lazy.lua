@@ -90,16 +90,25 @@ require("lazy").setup({
 		-- end
 	},
 	{
+		"sainnhe/sonokai",
+		name = "sonokai",
+		priority = 1000,
+		config = function()
+			vim.g['sonokai_style'] = 'maia'
+			vim.cmd.colorscheme("sonokai")
+		end
+	},
+	{
 		"folke/tokyonight.nvim",
 		name = "tokyonight",
 		priority = 1000,
 		opts = {
 			transparent = true,
 		},
-		config = function(_, opts)
-			require("tokyonight").setup(opts)
-			vim.cmd.colorscheme("tokyonight-storm")
-		end
+		-- config = function(_, opts)
+		-- 	require("tokyonight").setup(opts)
+		-- 	vim.cmd.colorscheme("tokyonight-storm")
+		-- end
 	},
 	{
 		"catppuccin/nvim",
