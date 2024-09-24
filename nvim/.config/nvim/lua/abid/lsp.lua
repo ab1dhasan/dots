@@ -110,12 +110,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set("n", "<leader>r", function() vim.lsp.buf.rename() end, opts)
 		vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 
-		require("lsp_signature").on_attach({
-      bind = true,
-      handler_opts = {
-        -- border = "rounded"
-      }
-    }, ev.buffer)
+		-- require("lsp_signature").on_attach({
+  --     bind = true,
+  --     handler_opts = {
+  --       -- border = "rounded"
+  --     }
+  --   }, ev.buffer)
 	end
 })
 
@@ -175,6 +175,7 @@ cmp.setup({
 		{ name = 'luasnip' }, -- For luasnip users.
 	}, {
 			{ name = 'buffer' },
+			{ name = 'nvim_lsp_signature_help' }
 	}),
 	formatting = {
 		format = function(_, vim_item)

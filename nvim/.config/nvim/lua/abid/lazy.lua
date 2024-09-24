@@ -283,23 +283,23 @@ require("lazy").setup({
 		"mattn/emmet-vim"
 	},
 	{ 'folke/trouble.nvim' },
-	{
-		"f-person/git-blame.nvim",
-		-- load the plugin at startup
-		event = "VeryLazy",
-		-- Because of the keys part, you will be lazy loading this plugin.
-		-- The plugin wil only load once one of the keys is used.
-		-- If you want to load the plugin at startup, add something like event = "VeryLazy",
-		-- or lazy = false. One of both options will work.
-		opts = {
-			-- your configuration comes here
-			-- for example
-			enabled = true, -- if you want to enable the plugin
-			message_template = " <author> • <date> • <summary> • <<sha>>", -- template for the blame message, check the Message template section for more options
-			date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
-			virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
-		},
-	},
+	-- {
+	-- 	"f-person/git-blame.nvim",
+	-- 	-- load the plugin at startup
+	-- 	event = "VeryLazy",
+	-- 	-- Because of the keys part, you will be lazy loading this plugin.
+	-- 	-- The plugin wil only load once one of the keys is used.
+	-- 	-- If you want to load the plugin at startup, add something like event = "VeryLazy",
+	-- 	-- or lazy = false. One of both options will work.
+	-- 	opts = {
+	-- 		-- your configuration comes here
+	-- 		-- for example
+	-- 		enabled = true, -- if you want to enable the plugin
+	-- 		message_template = " <author> • <date> • <summary> • <<sha>>", -- template for the blame message, check the Message template section for more options
+	-- 		date_format = "%m-%d-%Y %H:%M:%S", -- template for the date, check Date format section for more options
+	-- 		virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
+	-- 	},
+	-- },
 	{
 		"karb94/neoscroll.nvim",
 		config = function()
@@ -318,7 +318,8 @@ require("lazy").setup({
 		'hrsh7th/cmp-cmdline',
 		'hrsh7th/nvim-cmp',
 		'L3MON4D3/LuaSnip',
-		'saadparwaiz1/cmp_luasnip'
+		'saadparwaiz1/cmp_luasnip',
+		'hrsh7th/cmp-nvim-lsp-signature-help'
 	},
 	-- {
 	-- 	"pmizio/typescript-tools.nvim",
@@ -380,10 +381,10 @@ require("lazy").setup({
 		end
 	},
 	{'akinsho/git-conflict.nvim', version = "*", config = true},
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "VeryLazy",
-		opts = {},
-		config = function(_, opts) require'lsp_signature'.setup(opts) end
-	}
+	-- {
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	event = "VeryLazy",
+	-- 	opts = {},
+	-- 	config = function(_, opts) require'lsp_signature'.setup(opts) end
+	-- }
 })
