@@ -321,11 +321,11 @@ require("lazy").setup({
 		'saadparwaiz1/cmp_luasnip',
 		'hrsh7th/cmp-nvim-lsp-signature-help'
 	},
-	-- {
-	-- 	"pmizio/typescript-tools.nvim",
-	-- 	dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-	-- 	opts = {},
-	-- },
+	{
+		"pmizio/typescript-tools.nvim",
+		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+		opts = {},
+	},
 	{
 		'lewis6991/gitsigns.nvim',
 		config = function ()
