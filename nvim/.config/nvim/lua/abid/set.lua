@@ -11,3 +11,5 @@ vim.o.foldmethod = 'expr'
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldenable = false
 vim.o.signcolumn = 'yes:1'
+vim.o.fixeol = false
+vim.o.fixendofline = false
