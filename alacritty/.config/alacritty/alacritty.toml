@@ -1,4 +1,5 @@
-import = ["/home/abid/.config/alacritty/themes/themes/tokyo-night-storm.toml"]
+[general]
+import = ["/home/abid/.config/alacritty/themes/themes/neofusion.toml"]
 
 [env]
 TERM = "xterm-256color"

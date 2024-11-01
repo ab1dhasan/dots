@@ -82,6 +82,14 @@ require("lazy").setup({
 		-- end
 	},
 	{
+		"diegoulloao/neofusion.nvim",
+		name = "neofusion",
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme 'neofusion'
+		end
+	},
+	{
 		"rose-pine/neovim",
 		name = "rose-pine",
 		priority = 1000,
@@ -93,10 +101,10 @@ require("lazy").setup({
 		"sainnhe/sonokai",
 		name = "sonokai",
 		priority = 1000,
-		config = function()
-			vim.g['sonokai_style'] = 'maia'
-			vim.cmd.colorscheme("sonokai")
-		end
+		-- config = function()
+		-- 	vim.g['sonokai_style'] = 'maia'
+		-- 	vim.cmd.colorscheme("sonokai")
+		-- end
 	},
 	{
 		"folke/tokyonight.nvim",
