@@ -16,119 +16,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		'sainnhe/everforest',
-		name = "everforest",
-		priority = 1000,
-		config = function()
-			-- vim.g.everforest_background = 'soft'
-			-- vim.g.everforest_better_performance = 1
-			-- vim.cmd.colorscheme 'everforest'
-		end
-	},
-	{
-		"Mofiqul/dracula.nvim",
-		name = "dracula",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'dracula'
-		-- end
-	},
-	{
-		"tanvirtin/monokai.nvim",
-		name = "monokai",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'monokai_pro'
-		-- end
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		name = "gruvbox",
-		priority = 1000,
-		config = function()
-			-- vim.cmd.colorscheme 'gruvbox'
-		end
-	},
-	{
-		"Shatur/neovim-ayu",
-		name = "ayu",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'ayu-mirage'
-		-- end
-	},
-	{
-		"wilmanbarrios/palenight.nvim",
-		name = "palenight",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'palenight'
-		-- end
-	},
-	{
-		"metalelf0/jellybeans-nvim",
-		name = "jellybeans",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'rose-pine-main'
-		-- end
-	},
-	{
-		"bluz71/vim-nightfly-colors",
-		name = "nightfly",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'rose-pine-main'
-		-- end
-	},
-	{
-		"diegoulloao/neofusion.nvim",
-		name = "neofusion",
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme 'neofusion'
-		end
-	},
-	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.cmd.colorscheme 'rose-pine-main'
-		-- end
-	},
-	{
-		"sainnhe/sonokai",
-		name = "sonokai",
-		priority = 1000,
-		-- config = function()
-		-- 	vim.g['sonokai_style'] = 'maia'
-		-- 	vim.cmd.colorscheme("sonokai")
-		-- end
-	},
-	{
-		"folke/tokyonight.nvim",
-		name = "tokyonight",
-		priority = 1000,
-		opts = {
-			transparent = true,
-		},
-		-- config = function(_, opts)
-		-- 	require("tokyonight").setup(opts)
-		-- 	vim.cmd.colorscheme("tokyonight-storm")
-		-- end
-	},
-	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		-- opts = {
-		-- 	transparent_background = true,
-		-- },
-		-- config = function(_, opts)
-		-- 	require("catppuccin").setup(opts)
-		-- 	vim.cmd.colorscheme("catppuccin-macchiato")
-		-- end
+		opts = {
+			transparent_background = true,
+		},
+		config = function(_, opts)
+			require("catppuccin").setup(opts)
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end
 	},
 	{
 		"nvim-treesitter/nvim-treesitter",

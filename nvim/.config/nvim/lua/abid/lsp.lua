@@ -175,7 +175,7 @@ cmp.setup({
 		{ name = 'luasnip' }, -- For luasnip users.
 	}, {
 			{ name = 'buffer' },
-			{ name = 'nvim_lsp_signature_help' }
+			-- { name = 'nvim_lsp_signature_help' }
 	}),
 	formatting = {
 		format = function(_, vim_item)
