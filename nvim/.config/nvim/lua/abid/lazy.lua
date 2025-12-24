@@ -21,6 +21,7 @@ require("lazy").setup({
 		priority = 1000,
 		opts = {
 			transparent_background = true,
+			no_italic = true
 		},
 		config = function(_, opts)
 			require("catppuccin").setup(opts)
@@ -76,7 +77,8 @@ require("lazy").setup({
 			require("nvim-tree").setup({
 				sort_by = "case_sensitive",
 				view = {
-					width = 30,
+					width = 40,
+					relativenumber = true
 				},
 				renderer = {
 					group_empty = true,
@@ -282,6 +284,7 @@ require("lazy").setup({
 					row = 0,
 					col = 1
 				},
+				current_line_blame = true
 			}
 		end
 	},
