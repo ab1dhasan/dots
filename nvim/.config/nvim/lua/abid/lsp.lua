@@ -16,16 +16,15 @@ require('mason-lspconfig').setup({
 	handlers = {
     function(server_name)
 			if (server_name ~= 'tsserver') then
-				require('lspconfig')[server_name].setup({})
+				vim.lsp.config[server_name].setup({})
 			end
     end,
   }
 })
 
-local lspconfig = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-lspconfig.lua_ls.setup({
+vim.lsp.config('lua_ls', {
 	settings = {
 		Lua = {
 			diagnostics = {
@@ -34,7 +33,7 @@ lspconfig.lua_ls.setup({
 		}
 	}
 })
-lspconfig.rust_analyzer.setup({
+vim.lsp.config('rust_analyzer', {
 	diagnostics = {
 		enable = true,
 		experimental = {
@@ -43,7 +42,7 @@ lspconfig.rust_analyzer.setup({
 	},
 })
 -- lspconfig.tsserver.setup({})
-lspconfig.cssls.setup({
+vim.lsp.config('cssls', {
 	capabilities = capabilities,
 })
 
