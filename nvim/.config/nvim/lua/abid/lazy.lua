@@ -291,6 +291,12 @@ require("lazy").setup({
 		end
 	},
 	{'akinsho/git-conflict.nvim', version = "*", config = true},
+	{
+		'ray-x/lsp_signature.nvim',
+		config = function ()
+			require 'lsp_signature'.setup({})
+		end
+	}
 	-- {
 	-- 	"ray-x/lsp_signature.nvim",
 	-- 	event = "VeryLazy",
