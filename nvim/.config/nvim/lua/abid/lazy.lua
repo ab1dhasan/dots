@@ -296,11 +296,15 @@ require("lazy").setup({
 		config = function ()
 			require 'lsp_signature'.setup({})
 		end
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		---@module "ibl"
+		---@type ibl.config
+		opts = {},
+		config = function ()
+			require("ibl").setup()
+		end
 	}
-	-- {
-	-- 	"ray-x/lsp_signature.nvim",
-	-- 	event = "VeryLazy",
-	-- 	opts = {},
-	-- 	config = function(_, opts) require'lsp_signature'.setup(opts) end
-	-- }
 })
