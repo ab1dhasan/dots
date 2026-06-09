@@ -11,15 +11,15 @@ require('mason-lspconfig').setup({
 	ensure_installed = {
 		"lua_ls",
 		"rust_analyzer",
-		-- "ts_ls"
+		"ts_ls"
 	},
-	handlers = {
-    function(server_name)
-			if (server_name ~= 'tsserver') then
-				vim.lsp.config[server_name].setup({})
-			end
-    end,
-  }
+	-- handlers = {
+  --   function(server_name)
+	-- 		if (server_name ~= 'tsserver') then
+	-- 			vim.lsp.config[server_name].setup({})
+	-- 		end
+  --   end,
+  -- }
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
