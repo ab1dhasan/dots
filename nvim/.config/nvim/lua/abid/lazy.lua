@@ -306,5 +306,11 @@ require("lazy").setup({
 		config = function ()
 			require("ibl").setup()
 		end
+	},
+	{
+		'mawkler/modicator.nvim',
+		config = function()
+			require('modicator').setup()
+		end
 	}
 })
