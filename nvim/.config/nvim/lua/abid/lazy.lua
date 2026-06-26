@@ -16,14 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("rose-pine")
-		end
-	},
-	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
@@ -32,8 +24,8 @@ require("lazy").setup({
 			no_italic = true
 		},
 		config = function(_, opts)
-			-- require("catppuccin").setup(opts)
-			-- vim.cmd.colorscheme("catppuccin-mocha")
+			require("catppuccin").setup(opts)
+			vim.cmd.colorscheme("catppuccin-mocha")
 		end
 	},
 	{
